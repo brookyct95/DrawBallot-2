@@ -119,7 +119,7 @@ namespace DrawBallot
                 for (int j = 1; j <= ColCount; j++)
                 {
                     sb.Append(xlRange.Cells[i,j].value2.ToString());
-                    if (j <= ColCount)
+                    if (j < ColCount)
                         sb.Append(Seperator);
                 }
                 sb.Append("false");

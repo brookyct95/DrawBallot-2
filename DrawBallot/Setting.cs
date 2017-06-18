@@ -59,6 +59,7 @@ namespace DrawBallot
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     File.WriteAllText("Participant.csv", Methods.ExcelToCSV(ofd.FileName, ';').ToString());
+                    
                     mDataTable = Methods.ConvertCSVtoDataTable1("Participant.csv");
                     MessageBox.Show("Loading Done");
                 }
